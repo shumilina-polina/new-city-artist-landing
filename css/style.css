@@ -773,6 +773,180 @@ template {
   margin-bottom: 49px;
   color: #808080;
 }
+.roadmap .h {
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+}
+.roadmap_grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 362px 264px 264px 166px;
+  grid-template-rows: 176px 30px 52px 35px 111px 66px 17px 55px 90px;
+  grid-template-areas: "green1 pink1 blue1 blue1" "green1 pink1 purple1 purple1" "blue2 pink1 purple1 purple1" "blue2 green2 purple1 purple1" "blue2 green2 pink2 blue3" ". green2 pink2 blue3" ". green2 . blue3" "pink3 purple2 . blue3" "pink3 purple2 . ." "pink3 purple2 . .";
+}
+.roadmap_grid .grid-item-blue1,
+.roadmap_grid .grid-item-blue2,
+.roadmap_grid .grid-item-blue3,
+.roadmap_grid .grid-item-green1,
+.roadmap_grid .grid-item-green2,
+.roadmap_grid .grid-item-pink1,
+.roadmap_grid .grid-item-pink2,
+.roadmap_grid .grid-item-pink3,
+.roadmap_grid .grid-item-purple1,
+.roadmap_grid .grid-item-purple2 {
+  padding: 22px;
+  border-radius: 10px;
+  text-align: left;
+}
+.roadmap_grid .grid-item-blue1 .grid_title,
+.roadmap_grid .grid-item-blue2 .grid_title,
+.roadmap_grid .grid-item-blue3 .grid_title,
+.roadmap_grid .grid-item-green1 .grid_title,
+.roadmap_grid .grid-item-green2 .grid_title,
+.roadmap_grid .grid-item-pink1 .grid_title,
+.roadmap_grid .grid-item-pink2 .grid_title,
+.roadmap_grid .grid-item-pink3 .grid_title,
+.roadmap_grid .grid-item-purple1 .grid_title,
+.roadmap_grid .grid-item-purple2 .grid_title {
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+.roadmap_grid .grid-item-blue1 .grid_content,
+.roadmap_grid .grid-item-blue2 .grid_content,
+.roadmap_grid .grid-item-blue3 .grid_content,
+.roadmap_grid .grid-item-green1 .grid_content,
+.roadmap_grid .grid-item-green2 .grid_content,
+.roadmap_grid .grid-item-pink1 .grid_content,
+.roadmap_grid .grid-item-pink2 .grid_content,
+.roadmap_grid .grid-item-pink3 .grid_content,
+.roadmap_grid .grid-item-purple1 .grid_content,
+.roadmap_grid .grid-item-purple2 .grid_content {
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  opacity: 0.7;
+  word-wrap: break-word;
+}
+.roadmap_grid .grid-item-green1,
+.roadmap_grid .grid-item-green2 {
+  background-color: rgba(179, 239, 103, 0.5);
+  transition: color 0.3s, background-color 0.3s;
+}
+.roadmap_grid .grid-item-green1:hover,
+.roadmap_grid .grid-item-green2:hover {
+  background-color: #b3ef67;
+  color: #020202;
+  transition: color 0.3s, background-color 0.3s;
+}
+.roadmap_grid .grid-item-blue1,
+.roadmap_grid .grid-item-blue2,
+.roadmap_grid .grid-item-blue3 {
+  transition: color 0.3s, background-color 0.3s;
+  background-color: rgba(13, 170, 189, 0.5);
+}
+.roadmap_grid .grid-item-blue1:hover,
+.roadmap_grid .grid-item-blue2:hover,
+.roadmap_grid .grid-item-blue3:hover {
+  color: #020202;
+  transition: color 0.3s, background-color 0.3s;
+  background-color: #0daabd;
+}
+.roadmap_grid .grid-item-pink1,
+.roadmap_grid .grid-item-pink2,
+.roadmap_grid .grid-item-pink3 {
+  transition: color 0.3s, background-color 0.3s;
+  background-color: rgba(253, 96, 155, 0.5);
+}
+.roadmap_grid .grid-item-pink1:hover,
+.roadmap_grid .grid-item-pink2:hover,
+.roadmap_grid .grid-item-pink3:hover {
+  color: #020202;
+  transition: color 0.3s, background-color 0.3s;
+  background-color: #fd609b;
+}
+.roadmap_grid .grid-item-purple1,
+.roadmap_grid .grid-item-purple2 {
+  transition: color 0.3s, background-color 0.3s;
+  background-color: rgba(147, 129, 241, 0.5);
+}
+.roadmap_grid .grid-item-purple1:hover,
+.roadmap_grid .grid-item-purple2:hover {
+  color: #020202;
+  transition: color 0.3s, background-color 0.3s;
+  background-color: #9381f1;
+}
+.roadmap_grid .grid-item-green1 {
+  grid-area: green1;
+}
+.roadmap_grid .grid-item-green2 {
+  grid-area: green2;
+  position: relative;
+  border-radius: 10px 10px 10px 0;
+}
+.roadmap_grid .grid-item-green2_abs {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  width: 392px;
+  height: 119px;
+  border-radius: 10px 0 0 10px;
+  background-color: inherit;
+}
+.roadmap_grid .grid-item-pink1 {
+  grid-area: pink1;
+}
+.roadmap_grid .grid-item-pink2 {
+  grid-area: pink2;
+}
+.roadmap_grid .grid-item-pink3 {
+  grid-area: pink3;
+}
+.roadmap_grid .grid-item-blue1 {
+  grid-area: blue1;
+}
+.roadmap_grid .grid-item-blue2 {
+  grid-area: blue2;
+}
+.roadmap_grid .grid-item-blue3 {
+  grid-area: blue3;
+  padding: 19px;
+  position: relative;
+  border-radius: 10px 10px 10px 0;
+}
+.roadmap_grid .grid-item-blue3_abs {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  width: 294px;
+  height: 103px;
+  border-radius: 10px 0 0 10px;
+  background-color: inherit;
+}
+.roadmap_grid .grid-item-purple1 {
+  grid-area: purple1;
+}
+.roadmap_grid .grid-item-purple2 {
+  grid-area: purple2;
+  position: relative;
+  border-radius: 10px 10px 0 10px;
+}
+.roadmap_grid .grid-item-purple2_abs {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 490px;
+  height: 119px;
+  border-radius: 0 10px 10px 0;
+  background-color: inherit;
+}
 
 .art {
   margin-bottom: 140px;
