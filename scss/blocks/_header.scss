@@ -1,21 +1,127 @@
 .header {
-  padding: 86px 0;
-  .logo {
-    .logo_image {
-      margin-right: 9px;
-    }
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  position: sticky;
+  padding: 86px 0 10px;
+  animation: hideHeader 0.5s;
+  
+  &_fixed {
+    top: -70px;
+    animation: showHeader 0.5s;
+    background-color: #111111;
   }
-  &_navbar-links {
+  &_hidden {
+    top: -200px;
+    animation: hideHeader2 0.5s;
+  }
+
+  &_wrapper {
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &_navbar-link {
-    font-family: "Russo One";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #ffffff;
+
+  .logo {
+    display: block;
+    .logo_image {
+      margin-right: 9px;
+    }
+  }
+
+  &_navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-link {
+      display: inline;
+      margin-right: 27px;
+      & a {
+        @include russo;
+        font-size: 16px;
+        line-height: 19px;
+        color: $text-color-light;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        &:hover {
+          transition: opacity 0.3s ease;
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        margin-right: 115px;
+      }
+    }
+
+    .link-active {
+      opacity: 1;
+    }
+
+    &-lang {
+      display: inline;
+      @include russo;
+      font-size: 20px;
+      line-height: 24px;
+      color: $text-color-light;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      background: transparent;
+      transition: transform 0.3s ease;
+      &:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.1);
+      }
+    }
+
+    &-social {
+      position: absolute;
+      top: 85px;
+      right: 0;
+      &_links {
+        & li {
+          margin-bottom: 24px;
+          transition: transform 0.3s, opacity 0.3s;
+          opacity: 0.5;
+          &:hover {
+            transition: transform 0.3s, opacity 0.3s;
+            transform: scale(1.1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showHeader {
+  0% {
+    background-color: transparent;
+    top: 0;
+  }
+  100% {
+    background-color: #111111;
+    top: -70px;
+  }
+}
+@keyframes hideHeader {
+  0% {
+    background-color: #111111;
+    top: -70px;
+  }
+  100% {
+    background-color: transparent;
+    top: 0;
+  }
+}
+@keyframes hideHeader2 {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: -200px;
   }
 }

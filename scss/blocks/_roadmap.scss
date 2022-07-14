@@ -1,0 +1,18 @@
+.roadmap {
+  margin-bottom: 110px;
+
+  &_title {
+    @include russo;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 23px;
+  }
+
+  &_description {
+    @include inter;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 49px;
+    color: #808080;
+  }
+}

@@ -1,0 +1,50 @@
+.main {
+  padding-top: 86px;
+  position: relative;
+  margin-bottom: 370px;
+  &_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -700px;
+    margin-top: -900px;
+    z-index: -1;
+  }
+  &_wrapper {
+    position: relative;
+  }
+
+  &_title {
+    @include russo;
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 60%;
+    margin-bottom: 32px;
+  }
+  &_description {
+    @include inter;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+    max-width: 50%;
+    margin-bottom: 38px;
+  }
+  &_button {
+    padding: 24px 30px;
+    border: 3px solid $base-green;
+    border-radius: 16px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    &:hover {
+      background-color: $base-green;
+      color: $bg-color;
+      transform: translateY(-5px);
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+  }
+  &_image-car {
+    position: absolute;
+    top: 200px;
+    right: -10px;
+    z-index: -1;
+  }
+}

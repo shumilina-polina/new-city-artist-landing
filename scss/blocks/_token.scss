@@ -1,0 +1,136 @@
+.token {
+  margin-bottom: 110px;
+
+  &_title {
+    @include russo;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 130px;
+  }
+
+  &_video {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 550px;
+  }
+
+  &_slider {
+    position: relative;
+    margin-bottom: 40px;
+    display: none;
+
+    &-active {
+      display: block;
+    }
+    .swiper {
+      text-align: center;
+      &-pagination-bullet {
+        background-color: #fff;
+      }
+    }
+  }
+  &_card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_card {
+    width: 372px;
+    height: 243px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-regular,
+    &-rare,
+    &-veryrare {
+      &::before {
+        @include active-card;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+    &-regular {
+      &::before {
+        background-color: $base-green;
+      }
+    }
+    &-rare {
+      &::before {
+        background-color: $base-pink;
+      }
+    }
+    &-veryrare {
+      &::before {
+        background-color: $base-purple;
+      }
+    }
+
+    &-regular_active,
+    &-rare_active,
+    &-veryrare_active {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -13px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        opacity: 1;
+      }
+    }
+    &-regular_active {
+      &::before {
+        background-color: $base-green;
+      }
+    }
+    &-rare_active {
+      &::before {
+        background-color: $base-pink;
+      }
+    }
+    &-veryrare_active {
+      &::before {
+        background-color: $base-purple;
+      }
+    }
+    &-title {
+      @include russo;
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 16px;
+    }
+    &-number {
+      display: block;
+      @include inter;
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.7;
+      margin-bottom: 14px;
+    }
+    &-desc {
+      @include inter;
+      font-size: 18px;
+      line-height: 22px;
+      opacity: 0.7;
+    }
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &_price {
+        @include russo;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
+}

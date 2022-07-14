@@ -1,0 +1,119 @@
+.art {
+  margin-bottom: 140px;
+  position: relative;
+
+  &_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1550px;
+    margin-top: -450px;
+    z-index: -1;
+  }
+
+  &_title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
+  &_title {
+    @include russo;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &_description {
+    @include inter;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 49px;
+    color: #808080;
+  }
+
+  &_slider {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 98px;
+    .swiper {
+      text-align: center;
+      height: 950px;
+      &-slide {
+        width: 731px;
+        &:last-child {
+          width: 100%;
+        }
+        &-next {
+          transform: scale(0.7);
+          transition: transform 0.5s;
+        }
+      }
+
+      &-scrollbar {
+        background-color: rgba(255, 255, 255, 0.15);
+        width: 731px;
+        bottom: 240px;
+        left: 0;
+        &-drag {
+          background-color: $base-green;
+        }
+      }
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+  }
+
+  .slide_label {
+    position: absolute;
+    top: 730px;
+    left: 0;
+    width: 731px;
+    text-align: left;
+    .slide_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      &-main {
+        @include russo;
+        font-size: 32px;
+        line-height: 39px;
+      }
+      &-button {
+        @include russo;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 13px 35px;
+        border: 3px solid $base-green;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        &:hover {
+          background-color: $base-green;
+          color: $bg-color;
+          transform: translateY(-5px);
+          transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+      }
+    }
+    &-content {
+      @include russo;
+      display: block;
+      font-size: 18px;
+      line-height: 22px;
+      color: #c8c8c8;
+      margin-bottom: 40px;
+    }
+    &-author {
+      @include inter;
+      color: #c8c8c8;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .pink70 {
+      color: $base-pink;
+      opacity: 0.7;
+    }
+  }
+}

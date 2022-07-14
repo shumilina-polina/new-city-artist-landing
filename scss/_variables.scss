@@ -1,8 +1,28 @@
 $bg-color: #020202;
 $text-color-light: #ffffff;
+$footer: rgba(255, 255, 255, 0.06);
 
 $base-green: #b3ef67;
 $base-light-blue: #0daabd;
 $base-blue: #304dd4;
 $base-pink: #fd609b;
 $base-purple: #9381f1;
+
+@mixin russo {
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin inter {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin active-card {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}

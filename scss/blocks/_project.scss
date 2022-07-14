@@ -1,0 +1,60 @@
+.project {
+  position: relative;
+  margin-bottom: 99px;
+  &_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1000px;
+    margin-top: -550px;
+    z-index: -1;
+  }
+  &_wrapper {
+    position: relative;
+  }
+  &_title {
+    @include russo;
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 60%;
+    margin-bottom: 36px;
+  }
+  &_description {
+    @include inter;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+    max-width: 641px;
+    margin-bottom: 57px;
+  }
+
+  &_content {
+    max-width: 65%;
+    padding: 32px;
+    border: 3px solid rgba(123, 181, 95, 0.4);
+    border-radius: 22px;
+    margin-bottom: 257px;
+
+    &-text {
+      @include inter;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &_image-car1 {
+    position: absolute;
+    top: 120px;
+    right: -70px;
+  }
+  &_image-car2 {
+    position: absolute;
+    bottom: -200px;
+    left: -150px;
+  }
+  &_video,
+  .project_video {
+    object-fit: contain;
+    max-width: 100%;
+    width: 100%;
+  }
+}

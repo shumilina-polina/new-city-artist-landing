@@ -1,0 +1,48 @@
+.footer {
+  background-color: $footer;
+  padding: 71px 0;
+  &_wrapper {
+    text-align: center;
+  }
+  &_logo {
+    margin-bottom: 60px;
+  }
+  &_links {
+    margin: 0 auto 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 821px;
+    & li {
+      & a {
+        @include russo;
+        font-size: 16px;
+        line-height: 19px;
+        color: $text-color-light;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+        &:hover {
+          transition: opacity 0.3s ease;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  &_social {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & li {
+      opacity: 0.9;
+      transition: opacity 0.3s;
+      &:first-child {
+        margin-right: 64px;
+      }
+      &:hover {
+        transition: opacity 0.3s;
+        opacity: 0.5;
+      }
+    }
+  }
+}

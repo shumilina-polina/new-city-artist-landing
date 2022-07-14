@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -17,40 +18,316 @@
   <header class="header">
     <div class="container">
       <div class="header_wrapper">
-        <a href="#" class="logo">
+        <a href="#main" class="logo">
           <img src="assets/svg/logo.svg" alt="Logo: Car" class="logo__image" />
           <img src="assets/svg/logo_title.svg" alt="Logo: New City Artist" class="logo__title" />
         </a>
         <nav class="header_navbar">
           <ul class="header_navbar-links">
-            <li class="header_navbar-link">
-              <a href="#">Главная</a>
+            <li name="main" class="header_navbar-link">
+              <a href="#main">Главная</a>
             </li>
-            <li class="header_navbar-link">
-              <a href="#">О проекте</a>
+            <li name="project" class="header_navbar-link">
+              <a href="#project">О проекте</a>
             </li>
-            <li class="header_navbar-link">
-              <a href="#">Виды токенов</a>
+            <li name="token" class="header_navbar-link">
+              <a href="#token">Виды токенов</a>
             </li>
-            <li class="header_navbar-link">
-              <a href="#">Roadmap</a>
+            <li name="roadmap" class="header_navbar-link">
+              <a href="#roadmap">Roadmap</a>
             </li>
-            <li class="header_navbar-link">
-              <a href="#">Наши проекты</a>
+            <li name="art" class="header_navbar-link">
+              <a href="#projects">Наши проекты</a>
             </li>
           </ul>
-        </nav>
-        <div class="lang">
-          <button class="button_lang" type="button">
-            <!-- <a href="/index.html"> -->
+          <button class="button header_navbar-lang" type="button">
             ru
-            <!-- </a> -->
           </button>
-        </div>
+          <div class="header_navbar-social">
+            <ul class="header_navbar-social_links">
+              <li>
+                <a target="_blank" href="https://twitter.com/pushkeen_nft?s=21&t=oWD6rnPYDaBGRNU_zx1iSQ"><img
+                    src="./assets/svg/social/twitter.svg" alt="Twitter Icon"></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://t.me/pushkeen_nft"><img src="./assets/svg/social/telegram.svg"
+                    alt="Telegram Icon"></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
+  <section class="main" id="main">
+    <img class="main_image" src="./assets/img/main_bg.png" alt="Color">
+    <div class="container">
+      <div class="main_wrapper">
+        <h2 class="main_title">Особый взгляд на современное искусство</h2>
+        <p class="main_description">Творчество художников с ментальными расстройствами из объединения “Новые
+          городские
+          художники” существует вне канонов и стереотипов, оно искреннее, свободное от высказываний на злободневные темы
+          и
+          критики происходящего</p>
+        <button class="button main_button" type="button">Коллекция на OpenSea</button>
+        <img class="main_image-car" src="./assets/img/main_car.png" alt="Car">
+      </div>
+    </div>
+  </section>
+  <section class="project" id="project">
+    <img class="project_image" src="./assets/img/project_bg.png" alt="Car">
+    <div class="container">
+      <div class="project_wrapper">
+        <h2 class="project_title">О проекте</h2>
+        <p class="project_description">Целью создания благотворительной коллекции является популяризация направления
+          аутсайдерского искусства подопечных объединения “Новые городские художники”.</p>
+        <div class="project_content">
+          <p class="project_content-text">Художник Alex Kool создал машинки, основываясь на культовых представителей
+            автопрома, из разных культурных пространств и выдуманных миров: <span
+              style="color: #fd609b">американские</span>, <span style="color: #B3EF67">европейские</span>, <span
+              style="color: #9381F1">японские</span>,
+            <span style="color: #0DAABD">
+              постапокалиптические.
+            </span>
+            <br />
+            <br />
+            Искусство Alex Kool апеллирует к поп-арту, но не как развитому стилю, а к его эстетическому истоку,
+            заключающемуся в процессе раскрашивания узнаваемых образов Энди Уорхолом в детстве. И это возвращение
+            в период нашей жизни, когда мы придавали краски контурам вокруг, есть важнейшее забытое умение человека
+            во взрослом возрасте.
+          </p>
+        </div>
+        <img class="project_image-car1" src="./assets/img/project_car_1.png" alt="Car">
+        <img class="project_image-car2" src="./assets/img/project_car_2.png" alt="Car">
+      </div>
+      <video class="project_video" autoPlay loop preload="metadata" muted>
+        <source src="./assets/video/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+  <div class="container">
+    <section class="token" id="token">
+      <h2 class="token_title">Виды токенов</h2>
 
+      <div class="token_slider token_slider-regular token_slider-active">
+        <div class="swiper token_swiper-regular">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/regular/token_2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/regular/token_3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/regular/token_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="token_slider token_slider-rare">
+        <div class="swiper token_swiper-rare">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/rare/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/rare/2.mp4" type="video/mp4" />
+              </video></div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/rare/3.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="token_slider token_slider-veryrare">
+        <div class="swiper token_swiper-veryrare">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/veryrare/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/veryrare/2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="token_video" autoPlay loop preload="metadata" muted>
+                <source src="./assets/video/veryrare/3.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="token_card-wrapper">
+        <div class="token_card token_card-regular token_card-regular_active">
+          <div class="token_card-title_wrapper">
+            <h3 class="token_card-title">Обычные</h3>
+            <span class="token_card-number">400 токенов</span>
+            <p class="token_card-desc">Формат короткого видео, на котором создана 2D-анимация вытекания цвета, как
+              жидкости.
+              Общее количество – 400 шт.</p>
+          </div>
+          <div class="token_card-footer">
+            <span class="token_card-footer_price">50 $</span>
+            <img class="token_card-footer_logo" src="./assets/svg/logo_token.svg" alt="Logo Token">
+          </div>
+        </div>
+        <div class="token_card token_card-rare">
+          <div class="token_card-title_wrapper">
+            <h3 class="token_card-title">Редкие</h3>
+            <span class="token_card-number">90 токенов</span>
+            <p class="token_card-desc">Формат короткого видео, на котором создана 2D-анимация движения автомобиля.</p>
+          </div>
+          <div class="token_card-footer">
+            <span class="token_card-footer_price">100 $</span>
+            <img class="token_card-footer_logo" src="./assets/svg/logo_token.svg" alt="Logo Token">
+          </div>
+        </div>
+        <div class="token_card token_card-veryrare">
+          <div class="token_card-title_wrapper">
+            <h3 class="token_card-title">Очень редкие</h3>
+            <span class="token_card-number">10 токенов</span>
+            <p class="token_card-desc">Формат короткого видео, на котором создана 3D-модель машинки и анимация вытекания
+              жидкости определённых цветов. Общее количество – 10 шт.</p>
+          </div>
+          <div class="token_card-footer">
+            <span class="token_card-footer_price">300 $</span>
+            <img class="token_card-footer_logo" src="./assets/svg/logo_token.svg" alt="Logo Token">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="roadmap" id="roadmap">
+      <h2 class="roadmap_title">Roadmap</h2>
+      <p class="roadmap_description">Наша главная цель — развитие культуры, изучение расширения возможностей NFT
+        в искусстве. Вместе с этим мы являемся социально направленным проектом, который активно сотрудничает
+        с благотворительными организациями. Достижение каждого из этапов реализации коллекции позволяет нам продолжать
+        свою деятельность и благодарить каждого нашего коллекционера дополнительными благами.</p>
+      <div class="">GRID</div>
+    </section>
+    <section class="art" id="projects">
+      <img class="art_image" src="./assets/img/art_bg.png" alt="Color">
+      <div class="art_title-wrapper">
+        <h2 class="art_title">Наши предыдущие арт-проекты</h2>
+        <img src="./assets/svg/pushkeen.svg" alt="Pushkeen">
+      </div>
+      <div class="art_slider">
+        <div class="swiper art_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/img/art_slider/btr.png" alt="Back To The Roots">
+              <div class="slide_label">
+                <div class="slide_title">
+                  <h3 class="slide_title-main">BTR</h3>
+                  <a href="https://opensea.io/collection/back-tothe-roots" target="_blank">
+                    <button class="slide_title-button button" type="button">
+                      Подробнее
+                    </button>
+                  </a>
+                </div>
+                <span class="slide_label-content">Арт-галерея в ущелье Северного Кавказа.</span>
+                <p class="slide_label-author">Авторы:
+                  <span class="pink70">Misha Vert, Misha Libertee, Stas Bags, Tembolat Gugkaev, Andrei
+                    Kalugin, Konstantin Uzhve, Misha
+                    Mack.</span>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/art_slider/dirtydrops.png" alt="Dirty Drops">
+              <div class="slide_label">
+                <div class="slide_title">
+                  <h3 class="slide_title-main">Dirty drops</h3>
+                  <a href="https://www.binance.com/ru/nft/profile/pushkeen-nft-19ed89b1d934c88c25769ca0173a8886"
+                    target="_blank">
+                    <button class="slide_title-button button" type="button">
+                      Подробнее
+                    </button>
+                  </a>
+                </div>
+                <span class="slide_label-content">Арт на грязных грузовиках — газельный панк.</span>
+                <p class="slide_label-author">Автор:
+                  <span class="pink70">ProBoyNick</span>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/art_slider/halloween.png" alt="Halloween">
+              <div class="slide_label">
+                <div class="slide_title">
+                  <h3 class="slide_title-main">Halloween</h3>
+                  <a href="https://www.binance.com/ru/nft/collection/PushKeen?orderBy=list_time&orderType=-1&isBack=1&id=522004967883681792&order=list_time%40-1"
+                    target="_blank">
+                    <button class="slide_title-button button" type="button">
+                      Подробнее
+                    </button>
+                  </a>
+                </div>
+                <span class="slide_label-content">Кошелёк или жизнь?</span>
+                <p class="slide_label-author">Автор:
+                  <span class="pink70">l1fep4ckage</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_wrapper">
+        <a href="#main" class="logo">
+          <img class="footer_logo" src="./assets/svg/logo_white.svg" alt="New City Artist">
+        </a>
+        <ul class="footer_links">
+          <li>
+            <a href="#main">Главная</a>
+          </li>
+          <li>
+            <a href="#project">О проекте</a>
+          </li>
+          <li>
+            <a href="#token">Виды токенов</a>
+          </li>
+          <li>
+            <a href="#roadmap">Roadmap</a>
+          </li>
+          <li>
+            <a href="#projects">Наши проекты</a>
+          </li>
+        </ul>
+        <ul class="footer_social">
+          <li>
+            <a target="_blank" href="https://twitter.com/pushkeen_nft?s=21&t=oWD6rnPYDaBGRNU_zx1iSQ"><img
+                src="./assets/svg/social/twitter.svg" alt="Twitter Icon"></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://t.me/pushkeen_nft"><img src="./assets/svg/social/telegram.svg"
+                alt="Telegram Icon"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
