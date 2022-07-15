@@ -63,7 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //----const----
+
   const header = document.querySelector(".header");
+  const burger = document.querySelector(".header_burger");
+  const navbar = document.querySelector(".header_navbar");
   const headerSocial = document.querySelector(".header_navbar-social");
 
   const cardRegular = document.querySelector(".token_card-regular");
@@ -145,8 +148,16 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
         block: "start",
       });
+
+      navbar.classList.remove("header_navbar-active");
+      document.body.classList.remove("body-hidden");
     });
   }
+
+  burger.addEventListener("click", () => {
+    navbar.classList.toggle("header_navbar-active");
+    document.body.classList.toggle("body-hidden");
+  });
 
   function offset(el) {
     let rect = el.getBoundingClientRect(),

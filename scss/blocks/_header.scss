@@ -7,11 +7,13 @@
   animation: hideHeader 0.5s;
 
   &_fixed {
+    will-change: top;
     top: -70px;
     animation: showHeader 0.5s;
     background-color: #111111;
   }
   &_hidden {
+    will-change: top;
     top: -200px;
     animation: hideHeader2 0.5s;
   }
@@ -23,10 +25,20 @@
     justify-content: space-between;
   }
 
+  &_burger {
+    display: none;
+  }
+
   .logo {
     display: block;
     .logo_image {
       margin-right: 9px;
+      &-mobile {
+        display: none;
+      }
+    }
+    &_title-mobile {
+      display: none;
     }
   }
 
@@ -54,10 +66,6 @@
       &:last-child {
         margin-right: 115px;
       }
-    }
-
-    .link-active {
-      opacity: 1;
     }
 
     &-lang {
@@ -123,5 +131,178 @@
   }
   100% {
     top: -200px;
+  }
+}
+
+//-------MEDIA-------
+
+@media (max-width: 1146px) {
+  .header {
+    padding: 39px 0 10px;
+
+    &_fixed {
+      top: -23px;
+    }
+    &_hidden {
+      top: -100px;
+    }
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_burger {
+      display: block;
+      width: 30px;
+      height: 17px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      z-index: 100;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      .logo_image {
+        display: none;
+        &-mobile {
+          display: block;
+          margin-right: 6px;
+        }
+      }
+      &_title {
+        display: none;
+        &-mobile {
+          display: block;
+        }
+      }
+    }
+
+    &_navbar {
+      display: none;
+
+      &-active {
+        background-color: $mobile-color;
+        animation: showMobileHeader 0.5s;
+        display: flex;
+        margin: 0 auto;
+        padding: 149px 0 10px;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      &-links {
+        width: 358px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-link {
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 32px;
+        text-align: right;
+        & a {
+          font-size: 20px;
+          line-height: 24px;
+          color: $text-color-light;
+          opacity: 0.7;
+          transition: opacity 0.3s, color 0.3s;
+          &:hover {
+            transition: opacity 0.3s, color 0.3s;
+            opacity: 1;
+            color: $base-green;
+          }
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+
+      &-lang {
+        position: absolute;
+        top: 39px;
+        left: 50px;
+      }
+
+      &-social {
+        width: 358px;
+        margin: 0 auto;
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+
+        &_links {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90px;
+          & li {
+            margin-bottom: 24px;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0.5;
+            &:hover {
+              transition: transform 0.3s, opacity 0.3s;
+              transform: scale(1.1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes showHeader {
+    0% {
+      background-color: transparent;
+      top: 0;
+    }
+    100% {
+      background-color: #111111;
+      top: -23px;
+    }
+  }
+  @keyframes hideHeader {
+    0% {
+      background-color: #111111;
+      top: -23px;
+    }
+    100% {
+      background-color: transparent;
+      top: 0;
+    }
+  }
+  @keyframes hideHeader2 {
+    0% {
+      top: -23px;
+    }
+    100% {
+      top: -100px;
+    }
+  }
+
+  @keyframes showMobileHeader {
+    0% {
+      right: -50%;
+    }
+    100% {
+      right: 50%;
+    }
   }
 }

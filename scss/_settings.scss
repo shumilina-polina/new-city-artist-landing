@@ -38,3 +38,16 @@ img {
 a {
   text-decoration: none;
 }
+
+.body-hidden {
+  overflow: hidden;
+}
+
+
+//-------MEDIA-------
+
+@media (max-width: 1146px) {
+  .container {
+    max-width: 358px;
+  }
+}
