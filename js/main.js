@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
     autoplay: {
       delay: 3000,
+      disableOnInteraction: false,
     },
     keyboard: {
       enabled: true,
