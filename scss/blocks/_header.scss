@@ -31,14 +31,12 @@
 
   .logo {
     display: block;
-    .logo_image {
-      margin-right: 9px;
+    color: blue;
+    &_image {
+      display: block;
       &-mobile {
         display: none;
       }
-    }
-    &_title-mobile {
-      display: none;
     }
   }
 
@@ -170,14 +168,7 @@
     .logo {
       display: flex;
       align-items: center;
-      .logo_image {
-        display: none;
-        &-mobile {
-          display: block;
-          margin-right: 6px;
-        }
-      }
-      &_title {
+      &_image {
         display: none;
         &-mobile {
           display: block;

@@ -43,10 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
+  const swiper_cards = new Swiper(".token_swiper-cards", {
+    direction: "horizontal",
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: false,
+      draggable: true,
+    },
+  });
   const swiper_art = new Swiper(".art_swiper", {
     direction: "horizontal",
-    // loop: true,
-    // loopedSlides: 2,
     autoplay: {
       delay: 4000,
     },
@@ -109,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderRare.classList.remove("token_slider-active");
     sliderVeryrare.classList.add("token_slider-active");
   });
+
   window.onscroll = () => {
     const scroll = window.scrollY;
 
@@ -137,6 +144,24 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.add("header_fixed");
     }
   };
+
+  swiper_cards.on("slideChange", function () {
+    if (this.activeIndex === 0) {
+      sliderRegular.classList.add("token_slider-active");
+      sliderRare.classList.remove("token_slider-active");
+      sliderVeryrare.classList.remove("token_slider-active");
+    }
+    if (this.activeIndex === 1) {
+      sliderRegular.classList.remove("token_slider-active");
+      sliderRare.classList.add("token_slider-active");
+      sliderVeryrare.classList.remove("token_slider-active");
+    }
+    if (this.activeIndex === 2) {
+      sliderRegular.classList.remove("token_slider-active");
+      sliderRare.classList.remove("token_slider-active");
+      sliderVeryrare.classList.add("token_slider-active");
+    }
+  });
 
   const smoothLinks = document.querySelectorAll("a[href^='#'");
   for (let smoothLink of smoothLinks) {

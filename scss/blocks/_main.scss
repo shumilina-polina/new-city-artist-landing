@@ -48,3 +48,58 @@
     z-index: -1;
   }
 }
+
+//-------MEDIA-------
+
+@media (max-width: 1146px) {
+  .main {
+    padding-top: 356px;
+    margin-bottom: 126px;
+    &_wrapper {
+      padding: 40px 20px;
+      border: 3px solid rgba($base-green, 0.51);
+      border-radius: 22px;
+    }
+    &_image {
+      top: 0;
+      left: 0;
+      max-width: 800px;
+      margin-left: -70px;
+      margin-top: -300px;
+    }
+
+    &_title {
+      font-size: 24px;
+      line-height: 29px;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+    &_description {
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 100%;
+      margin-bottom: 0px;
+    }
+    &_button {
+      position: absolute;
+      bottom: -16px;
+      right: 0;
+      padding: 20px 24px;
+      border: none;
+      transition: none;
+      background-color: $base-green;
+      color: $bg-color;
+      &:hover {
+        transform: none;
+        transition: none;
+      }
+    }
+    &_image-car {
+      position: absolute;
+      top: -300px;
+      max-width: 348px;
+      right: -10px;
+      transform: scale(-1, 1);
+    }
+  }
+}
