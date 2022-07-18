@@ -2,6 +2,7 @@
   z-index: 99999;
   top: 0;
   left: 0;
+  right: 0;
   position: sticky;
   padding: 86px 0 10px;
   animation: hideHeader 0.5s;
@@ -181,7 +182,6 @@
 
       &-active {
         background-color: $mobile-color;
-        animation: showMobileHeader 0.5s;
         display: flex;
         margin: 0 auto;
         padding: 149px 0 10px;
@@ -267,33 +267,6 @@
     100% {
       background-color: #111111;
       top: -23px;
-    }
-  }
-  @keyframes hideHeader {
-    0% {
-      background-color: #111111;
-      top: -23px;
-    }
-    100% {
-      background-color: transparent;
-      top: 0;
-    }
-  }
-  @keyframes hideHeader2 {
-    0% {
-      top: -23px;
-    }
-    100% {
-      top: -100px;
-    }
-  }
-
-  @keyframes showMobileHeader {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 50%;
     }
   }
 }

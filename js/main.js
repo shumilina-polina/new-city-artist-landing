@@ -176,11 +176,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       navbar.classList.remove("header_navbar-active");
       document.body.classList.remove("body-hidden");
+      document.documentElement.classList.remove("body-hidden");
     });
   }
 
   burger.addEventListener("click", () => {
     navbar.classList.toggle("header_navbar-active");
+    document.documentElement.classList.toggle("body-hidden");
     document.body.classList.toggle("body-hidden");
   });
 

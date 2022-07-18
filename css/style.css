@@ -10,7 +10,6 @@ ul {
 
 html {
   scroll-padding-top: 50px;
-  overflow-x: hidden;
 }
 
 body {
@@ -52,6 +51,9 @@ a {
 @media (max-width: 1146px) {
   .container {
     max-width: 358px;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -370,6 +372,7 @@ template {
   z-index: 99999;
   top: 0;
   left: 0;
+  right: 0;
   position: -webkit-sticky;
   position: sticky;
   padding: 86px 0 10px;
@@ -567,8 +570,6 @@ template {
   }
   .header_navbar-active {
     background-color: #040507;
-    -webkit-animation: showMobileHeader 0.5s;
-            animation: showMobileHeader 0.5s;
     display: flex;
     margin: 0 auto;
     padding: 149px 0 10px;
@@ -656,58 +657,6 @@ template {
     100% {
       background-color: #111111;
       top: -23px;
-    }
-  }
-  @-webkit-keyframes hideHeader {
-    0% {
-      background-color: #111111;
-      top: -23px;
-    }
-    100% {
-      background-color: transparent;
-      top: 0;
-    }
-  }
-  @keyframes hideHeader {
-    0% {
-      background-color: #111111;
-      top: -23px;
-    }
-    100% {
-      background-color: transparent;
-      top: 0;
-    }
-  }
-  @-webkit-keyframes hideHeader2 {
-    0% {
-      top: -23px;
-    }
-    100% {
-      top: -100px;
-    }
-  }
-  @keyframes hideHeader2 {
-    0% {
-      top: -23px;
-    }
-    100% {
-      top: -100px;
-    }
-  }
-  @-webkit-keyframes showMobileHeader {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 50%;
-    }
-  }
-  @keyframes showMobileHeader {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 50%;
     }
   }
 }

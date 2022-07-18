@@ -10,7 +10,6 @@ ul {
 
 html {
   scroll-padding-top: 50px;
-  overflow-x: hidden;
 }
 
 body {
@@ -49,5 +48,8 @@ a {
 @media (max-width: 1146px) {
   .container {
     max-width: 358px;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
