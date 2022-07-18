@@ -6,6 +6,9 @@
   }
   &_logo {
     margin-bottom: 60px;
+    &-mobile {
+      display: none;
+    }
   }
   &_links {
     margin: 0 auto 60px;
@@ -42,6 +45,58 @@
       &:hover {
         transition: opacity 0.3s;
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+//-------MEDIA-------
+
+@media (max-width: 1146px) {
+  .footer {
+    padding: 43px 20px 47px;
+    &_wrapper {
+      text-align: left;
+    }
+    &_logo {
+      margin-bottom: 0px;
+      display: none;
+      &-mobile {
+        display: block;
+        margin-bottom: 40px;
+      }
+    }
+    &_links {
+      margin: 0px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      max-width: 100%;
+      & li {
+        margin-bottom: 16px;
+        & a {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+    &_social {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      & li {
+        opacity: 0.9;
+        transition: opacity 0.3s;
+        &:first-child {
+          margin-right: 20px;
+        }
+        &:hover {
+          transition: opacity 0.3s;
+          opacity: 0.5;
+        }
       }
     }
   }

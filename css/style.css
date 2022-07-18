@@ -1762,6 +1762,9 @@ template {
 .footer_logo {
   margin-bottom: 60px;
 }
+.footer_logo-mobile {
+  display: none;
+}
 .footer_links {
   margin: 0 auto 60px;
   display: flex;
@@ -1799,4 +1802,54 @@ template {
 .footer_social li:hover {
   transition: opacity 0.3s;
   opacity: 0.5;
+}
+
+@media (max-width: 1146px) {
+  .footer {
+    padding: 43px 20px 47px;
+  }
+  .footer_wrapper {
+    text-align: left;
+  }
+  .footer_logo {
+    margin-bottom: 0px;
+    display: none;
+  }
+  .footer_logo-mobile {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .footer_links {
+    margin: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .footer_links li {
+    margin-bottom: 16px;
+  }
+  .footer_links li a {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer_social {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer_social li {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+  }
+  .footer_social li:first-child {
+    margin-right: 20px;
+  }
+  .footer_social li:hover {
+    transition: opacity 0.3s;
+    opacity: 0.5;
+  }
 }/*# sourceMappingURL=style.css.map */
