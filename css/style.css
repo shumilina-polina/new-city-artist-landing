@@ -1807,7 +1807,7 @@ template {
 
 @media (max-width: 1146px) {
   .footer {
-    padding: 43px 20px 47px;
+    padding: 43px 0px 47px;
   }
   .footer_wrapper {
     text-align: left;
