@@ -23,14 +23,6 @@
     line-height: 58px;
   }
 
-  &_description {
-    @include inter;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 49px;
-    color: #808080;
-  }
-
   &_slider {
     position: relative;
     margin-bottom: 40px;
@@ -114,6 +106,104 @@
     .pink70 {
       color: $base-pink;
       opacity: 0.7;
+    }
+  }
+}
+
+//-------MEDIA-------
+
+@media (max-width: 1146px) {
+  .art {
+    margin-bottom: 30px;
+
+    &_image {
+      display: none;
+    }
+
+    &_title-wrapper {
+      margin-bottom: 34px;
+      &-image {
+        display: none;
+      }
+    }
+    &_title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &_slider {
+      margin-bottom: 40px;
+      padding-left: 0px;
+      .swiper {
+        text-align: center;
+        height: 610px;
+        &-slide {
+          width: 100%;
+          &-next {
+            transform: none;
+            transition: none;
+          }
+        }
+
+        &-scrollbar {
+          background-color: rgba(255, 255, 255, 0.15);
+          width: 100%;
+          top: 350px;
+
+          left: 0;
+          &-drag {
+            background-color: $base-green;
+          }
+        }
+      }
+    }
+
+    .swiper-slide {
+      position: relative;
+    }
+
+    .slide_label {
+      position: absolute;
+      top: 380px;
+      left: 0;
+      width: 100%;
+      text-align: left;
+      .slide_title {
+        margin-bottom: 16px;
+        &-main {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        &-button {
+          font-size: 14px;
+          line-height: 17px;
+          padding: 0;
+          border: none;
+          text-decoration: underline;
+          border-radius: 0;
+          transition: none;
+          color: rgba(174, 220, 116, 0.7);
+          &:hover {
+            background-color: transparent;
+            color: rgba(174, 220, 116, 0.7);
+            transform: none;
+            transition: none;
+          }
+        }
+      }
+      &-content {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 12px;
+      }
+      &-author {
+        font-size: 14px;
+        line-height: 17px;
+      }
+      .pink70 {
+        color: $base-pink;
+        opacity: 0.7;
+      }
     }
   }
 }

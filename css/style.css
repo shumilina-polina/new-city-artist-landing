@@ -1573,15 +1573,6 @@ template {
   font-size: 48px;
   line-height: 58px;
 }
-.art_description {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 49px;
-  color: #808080;
-}
 .art_slider {
   position: relative;
   margin-bottom: 40px;
@@ -1673,6 +1664,94 @@ template {
   opacity: 0.7;
 }
 
+@media (max-width: 1146px) {
+  .art {
+    margin-bottom: 30px;
+  }
+  .art_image {
+    display: none;
+  }
+  .art_title-wrapper {
+    margin-bottom: 34px;
+  }
+  .art_title-wrapper-image {
+    display: none;
+  }
+  .art_title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .art_slider {
+    margin-bottom: 40px;
+    padding-left: 0px;
+  }
+  .art_slider .swiper {
+    text-align: center;
+    height: 610px;
+  }
+  .art_slider .swiper-slide {
+    width: 100%;
+  }
+  .art_slider .swiper-slide-next {
+    transform: none;
+    transition: none;
+  }
+  .art_slider .swiper-scrollbar {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 100%;
+    top: 350px;
+    left: 0;
+  }
+  .art_slider .swiper-scrollbar-drag {
+    background-color: #b3ef67;
+  }
+  .art .swiper-slide {
+    position: relative;
+  }
+  .art .slide_label {
+    position: absolute;
+    top: 380px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .art .slide_label .slide_title {
+    margin-bottom: 16px;
+  }
+  .art .slide_label .slide_title-main {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .art .slide_label .slide_title-button {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+    border: none;
+    text-decoration: underline;
+    border-radius: 0;
+    transition: none;
+    color: rgba(174, 220, 116, 0.7);
+  }
+  .art .slide_label .slide_title-button:hover {
+    background-color: transparent;
+    color: rgba(174, 220, 116, 0.7);
+    transform: none;
+    transition: none;
+  }
+  .art .slide_label-content {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 12px;
+  }
+  .art .slide_label-author {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .art .slide_label .pink70 {
+    color: #fd609b;
+    opacity: 0.7;
+  }
+}
 .footer {
   background-color: rgba(255, 255, 255, 0.06);
   padding: 71px 0;
