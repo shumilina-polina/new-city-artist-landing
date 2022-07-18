@@ -89,6 +89,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const roadmap = document.querySelector(".roadmap");
   const art = document.querySelector(".art");
 
+  const audioButton = document.querySelector(".header_navbar-audio");
+  const audio = document.querySelector(".audio");
+  const playAudio = document.querySelector(".header_navbar-audio_play");
+  const stopAudio = document.querySelector(".header_navbar-audio_stop");
+  const playAudioMobile = document.querySelector(
+    ".header_navbar-audio_play-mobile"
+  );
+  const stopAudioMobile = document.querySelector(
+    ".header_navbar-audio_stop-mobile"
+  );
+
   const sections = [main, token, project, roadmap, art];
 
   cardRegular.addEventListener("click", (e) => {
@@ -116,6 +127,22 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderVeryrare.classList.add("token_slider-active");
   });
 
+  audioButton.addEventListener("click", () => {
+    if (stopAudio.classList.contains("header_navbar-audio_hidden")) {
+      stopAudio.classList.remove("header_navbar-audio_hidden");
+      playAudio.classList.add("header_navbar-audio_hidden");
+      stopAudioMobile.classList.remove("header_navbar-audio_hidden");
+      playAudioMobile.classList.add("header_navbar-audio_hidden");
+      audio.play();
+    } else {
+      audio.pause();
+      stopAudio.classList.add("header_navbar-audio_hidden");
+      playAudio.classList.remove("header_navbar-audio_hidden");
+      stopAudioMobile.classList.add("header_navbar-audio_hidden");
+      playAudioMobile.classList.remove("header_navbar-audio_hidden");
+    }
+  });
+
   window.onscroll = () => {
     const scroll = window.scrollY;
 
@@ -125,7 +152,11 @@ document.addEventListener("DOMContentLoaded", function () {
         scroll > offset(elem).top - 150 &&
         scroll < offset(elem).top + elem.offsetHeight
       ) {
-        a.setAttribute("style", "opacity: 1;");
+        if (window.matchMedia("(max-width: 1146px)").matches) {
+          a.setAttribute("style", "opacity: 1; color: #AEDC74;");
+        } else {
+          a.setAttribute("style", "opacity: 1;");
+        }
       } else {
         a.removeAttribute("style");
       }

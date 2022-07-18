@@ -12,6 +12,27 @@
     top: -70px;
     animation: showHeader 0.5s;
     background-color: #111111;
+    .header_navbar-audio {
+      position: relative;
+      &::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(123, 181, 95, 0.71) 0%,
+          transparent 70%
+        );
+        border-radius: 100px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+    }
   }
   &_hidden {
     will-change: top;
@@ -45,6 +66,80 @@
     position: relative;
     display: flex;
     align-items: center;
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 152px;
+    }
+
+    &-audio {
+      position: relative;
+      height: 18px;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 43px;
+      }
+
+      &::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 89px;
+        height: 89px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(123, 181, 95, 0.71) 0%,
+          transparent 100%
+        );
+        border-radius: 100px;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+      }
+
+      &_play,
+      &_stop,
+      &_play-mobile,
+      &_stop-mobile {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        z-index: 100;
+        display: block;
+      }
+      &_play-mobile,
+      &_stop-mobile {
+        display: none;
+      }
+      &_hidden {
+        display: none;
+      }
+
+      &_button {
+        z-index: 10;
+        height: 18px;
+        width: 13px;
+        transition: transform 0.3s;
+        position: relative;
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s;
+        }
+      }
+    }
 
     &-link {
       display: inline;
@@ -138,6 +233,7 @@
 @media (max-width: 1146px) {
   .header {
     padding: 39px 0 10px;
+    position: fixed;
 
     &_fixed {
       top: -23px;
@@ -180,6 +276,51 @@
     &_navbar {
       display: none;
 
+      &-buttons {
+        order: -1;
+        width: 358px;
+        margin: 0 auto;
+        position: relative;
+        justify-content: flex-end;
+      }
+
+      &-audio {
+        border-radius: 16px;
+        background-color: $base-green-light;
+        display: flex;
+        align-items: center;
+        padding: 19px 24px;
+        margin-bottom: 37px;
+        &_play,
+        &_stop {
+          display: none;
+        }
+        &_play-mobile,
+        &_stop-mobile {
+          display: block;
+        }
+        &_hidden {
+          display: none;
+        }
+        &::before {
+          background-image: none;
+          border-radius: none;
+          -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+        }
+        &_button {
+          z-index: 10;
+          height: 18px;
+          width: 13px;
+          transition: transform 0.3s;
+          position: relative;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+          }
+        }
+      }
+
       &-active {
         background-color: $mobile-color;
         display: flex;
@@ -201,6 +342,7 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
       }
 
       &-link {
@@ -217,7 +359,7 @@
           &:hover {
             transition: opacity 0.3s, color 0.3s;
             opacity: 1;
-            color: $base-green;
+            color: $base-green-light;
           }
         }
         &:last-child {
@@ -226,9 +368,10 @@
       }
 
       &-lang {
+        order: -1;
         position: absolute;
-        top: 39px;
-        left: 50px;
+        top: -108px;
+        left: 0;
       }
 
       &-social {
@@ -267,6 +410,16 @@
     100% {
       background-color: #111111;
       top: -23px;
+    }
+  }
+  @keyframes hideHeader {
+    0% {
+      background-color: #111111;
+      top: -23px;
+    }
+    100% {
+      background-color: transparent;
+      top: 0;
     }
   }
 }
