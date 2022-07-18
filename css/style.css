@@ -10,6 +10,7 @@ ul {
 
 html {
   scroll-padding-top: 50px;
+  overflow-x: hidden;
 }
 
 body {
