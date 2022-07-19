@@ -322,15 +322,18 @@
       }
 
       &-active {
-        background-color: $mobile-color;
+        background-image: linear-gradient(
+          to right,
+          transparent 20% 20%,
+          $mobile-color 20%
+        );
         display: flex;
-        margin: 0 auto;
-        padding: 149px 0 10px;
+        padding: 149px 0 10vh;
         align-items: flex-end;
         justify-content: space-between;
         flex-direction: column;
         position: absolute;
-        height: 100vh;
+        height: 110vh;
         width: 100vw;
         top: 0;
         right: 50%;
@@ -371,7 +374,7 @@
         order: -1;
         position: absolute;
         top: -108px;
-        left: 0;
+        left: 20%;
       }
 
       &-social {

@@ -43,6 +43,10 @@ a {
   overflow: hidden;
 }
 
+.blur{
+  filter: blur(2px);
+}
+
 //-------MEDIA-------
 
 @media (max-width: 1146px) {

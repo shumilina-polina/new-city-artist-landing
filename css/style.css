@@ -48,6 +48,10 @@ a {
   overflow: hidden;
 }
 
+.blur {
+  filter: blur(2px);
+}
+
 @media (max-width: 1146px) {
   .container {
     max-width: 358px;
@@ -688,15 +692,14 @@ template {
     transition: transform 0.3s;
   }
   .header_navbar-active {
-    background-color: #040507;
+    background-image: linear-gradient(to right, transparent 20% 20%, #040507 20%);
     display: flex;
-    margin: 0 auto;
-    padding: 149px 0 10px;
+    padding: 149px 0 10vh;
     align-items: flex-end;
     justify-content: space-between;
     flex-direction: column;
     position: absolute;
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     top: 0;
     right: 50%;
@@ -734,7 +737,7 @@ template {
     order: -1;
     position: absolute;
     top: -108px;
-    left: 0;
+    left: 20%;
   }
   .header_navbar-social {
     width: 358px;
@@ -1475,7 +1478,7 @@ template {
     gap: 20px;
     grid-template-columns: 169px 169px;
     grid-template-rows: 204px 16px 145px 240px 129px 162px 48px 102px 140px;
-    grid-template-areas: "green1 pink1" "green1 ." "blue1 blue1" "blue2 green2" "purple1 purple1" "pink2 blue3" ". blue3" "pink3 pink3" "purple2 purple2";
+    grid-template-areas: "green1 pink1" "green1 ." "blue1 blue1" "blue2 green2" "purple1 purple1" "pink2 blue3" "pink2 blue3" "pink3 pink3" "purple2 purple2";
   }
   .roadmap_grid .grid-item-blue1,
 .roadmap_grid .grid-item-blue2,
@@ -1589,19 +1592,7 @@ template {
   }
   .roadmap_grid .grid-item-pink3 {
     grid-area: pink3;
-    border-radius: 0 10px 10px 10px;
-    position: relative;
-    padding-top: 2px;
-  }
-  .roadmap_grid .grid-item-pink3_abs {
-    position: absolute;
-    top: 0px;
-    transform: translateY(-100%);
-    left: 0;
-    width: 169px;
-    height: 67px;
-    border-radius: 10px 10px 0 0;
-    background-color: inherit;
+    border-radius: 10px;
   }
   .roadmap_grid .grid-item-blue1 {
     grid-area: blue1;
