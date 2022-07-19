@@ -12,27 +12,6 @@
     top: -70px;
     animation: showHeader 0.5s;
     background-color: #111111;
-    .header_navbar-audio {
-      position: relative;
-      &::before {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(123, 181, 95, 0.71) 0%,
-          transparent 70%
-        );
-        border-radius: 100px;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-      }
-    }
   }
   &_hidden {
     will-change: top;
@@ -94,8 +73,8 @@
         content: "";
         z-index: -1;
         position: absolute;
-        width: 89px;
-        height: 89px;
+        width: 60px;
+        height: 60px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -105,8 +84,13 @@
           transparent 100%
         );
         border-radius: 100px;
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        will-change: width, height;
+        animation-name: blurAudio;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
 
       &_play,
@@ -225,6 +209,17 @@
   }
   100% {
     top: -200px;
+  }
+}
+
+@keyframes blurAudio {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
   }
 }
 

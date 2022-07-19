@@ -390,23 +390,6 @@ template {
           animation: showHeader 0.5s;
   background-color: #111111;
 }
-.header_fixed .header_navbar-audio {
-  position: relative;
-}
-.header_fixed .header_navbar-audio::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(123, 181, 95, 0.71) 0%, transparent 70%);
-  border-radius: 100px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
 .header_hidden {
   will-change: top;
   top: -200px;
@@ -462,15 +445,24 @@ template {
   content: "";
   z-index: -1;
   position: absolute;
-  width: 89px;
-  height: 89px;
+  width: 60px;
+  height: 60px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: radial-gradient(50% 50% at 50% 50%, rgba(123, 181, 95, 0.71) 0%, transparent 100%);
   border-radius: 100px;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  will-change: width, height;
+  -webkit-animation-name: blurAudio;
+          animation-name: blurAudio;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .header_navbar-audio_play, .header_navbar-audio_stop, .header_navbar-audio_play-mobile, .header_navbar-audio_stop-mobile {
   position: absolute;
@@ -607,6 +599,26 @@ template {
   }
   100% {
     top: -200px;
+  }
+}
+@-webkit-keyframes blurAudio {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+  }
+}
+@keyframes blurAudio {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
   }
 }
 @media (max-width: 1146px) {
@@ -1061,6 +1073,7 @@ template {
   justify-content: space-between;
 }
 .token_card {
+  cursor: pointer;
   width: 372px;
   height: 243px;
   position: relative;
